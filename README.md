@@ -1,8 +1,12 @@
 To convert the Maui app into a Visul basic
 1 Create MauiApp2
+
 2 In the Maui project, created the ClassLibrary2 project for the visual Basic Library
+
 3 Double-click on the Visual Basic project to open the ClassLibrary2.vbproj configuration file
+
 4 Replace the following lines
+
 <PropertyGroup>
     <RootNamespace>ClassLibrary2</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
@@ -10,7 +14,7 @@ To convert the Maui app into a Visul basic
   </PropertyGroup>
   
   with the following lines
-  
+  <code>
   <PropertyGroup>
     <RootNamespace>ClassLibrary2</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
@@ -24,18 +28,21 @@ To convert the Maui app into a Visul basic
     <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
-
+</code>
 And the most important line is
 
 <UseMaui>true</UseMaui>
+
 
 5 Clean the following libraries in nuget
         Microsoft.Maui.Dependencies
         Microsoft.Maui.Extensions
         Microsoft.Windows.SDK.BuildTools
         System.Runtime.InteropServices.NFloat.Internal
+        
 6 Convert the codes from c# to Visual Basic
      MauiProgram is converted to a Module and given type Public
+     
 7 Adding the BASIC project to the Maui project for reference
          * Click the can button on the Maui project
          * Choose add -> Project refrance
