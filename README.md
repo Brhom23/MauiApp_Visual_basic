@@ -24,7 +24,10 @@ To convert the Maui app into a Visul basic
     <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
-  واهم ما في هذه الاسطر  <UseMaui>true</UseMaui>
+
+And the most important line is
+
+<UseMaui>true</UseMaui>
 
 5 Clean the following libraries in nuget
         Microsoft.Maui.Dependencies
